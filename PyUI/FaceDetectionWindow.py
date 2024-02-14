@@ -82,11 +82,11 @@ class Ui_DetectionWindow(object):
 "")
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.detected_gesture_name = QtWidgets.QLabel(self.verticalWidget)
-        self.detected_gesture_name.setStyleSheet("color: #1db954;\n"
+        self.detected_face_name = QtWidgets.QLabel(self.verticalWidget)
+        self.detected_face_name.setStyleSheet("color: #1db954;\n"
 "border: none;")
-        self.detected_gesture_name.setObjectName("detected_gesture_name")
-        self.verticalLayout.addWidget(self.detected_gesture_name)
+        self.detected_face_name.setObjectName("detected_face_name")
+        self.verticalLayout.addWidget(self.detected_face_name)
         self.label_2 = QtWidgets.QLabel(self.verticalWidget)
         self.label_2.setStyleSheet("color: white;\n"
 "border: 2px solid #535353;\n"
@@ -96,11 +96,11 @@ class Ui_DetectionWindow(object):
 "")
         self.label_2.setObjectName("label_2")
         self.verticalLayout.addWidget(self.label_2)
-        self.detection_confidence = QtWidgets.QLabel(self.verticalWidget)
-        self.detection_confidence.setStyleSheet("color: #1db954;\n"
+        self.detection_playlist = QtWidgets.QLabel(self.verticalWidget)
+        self.detection_playlist.setStyleSheet("color: #1db954;\n"
 "border: none;")
-        self.detection_confidence.setObjectName("detection_confidence")
-        self.verticalLayout.addWidget(self.detection_confidence)
+        self.detection_playlist.setObjectName("detection_playlist")
+        self.verticalLayout.addWidget(self.detection_playlist)
         self.verticalLayout_4.addWidget(self.verticalWidget)
         spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_4.addItem(spacerItem1)
@@ -152,9 +152,9 @@ class Ui_DetectionWindow(object):
         DetectionWindow.setWindowTitle(_translate("DetectionWindow", "FaceDetection"))
         self.label_3.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">INFORMATION</span></p></body></html>"))
         self.label.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">DETECTED FACE</span></p></body></html>"))
-        self.detected_gesture_name.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
-        self.label_2.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">CONFIDENCE</span></p></body></html>"))
-        self.detection_confidence.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
+        self.detected_face_name.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
+        self.label_2.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">PLAYLIST'S NAME</span></p></body></html>"))
+        self.detection_playlist.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><br/></p></body></html>"))
         self.detection_camera.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">CLICK START TO DETECT YOUR FACE AND</span></p><p align=\"center\"><span style=\" font-size:14pt;\">LOAD YOUR PLAYLIST</span></p></body></html>"))
         self.pushButton_2.setText(_translate("DetectionWindow", "START"))
         self.pushButton_3.setText(_translate("DetectionWindow", "PLAY"))
