@@ -26,7 +26,8 @@ class GestureDetectionWindow(QDialog, Ui_DetectionWindow):
         self.pushButton_2.clicked.connect(self.connection_action)
     
     def connection_action(self) -> None:
-        # 
-
+        # function starts actions of created thread
+        
         # TODO
         pass
+

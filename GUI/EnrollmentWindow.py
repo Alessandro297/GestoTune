@@ -1,3 +1,9 @@
+import os
+import io
+import pickle
+import face_recognition
+from PIL import Image
+
 from PyQt5.QtCore import Qt, pyqtSlot
 from PyQt5.QtGui import QCloseEvent, QIcon, QImage, QKeyEvent, QPixmap
 from PyQt5.QtWidgets import QDialog, QWidget, QTextEdit, QFileDialog
@@ -70,35 +76,86 @@ class EnrollmentWindow(QDialog, Ui_DetectionWindow):
     def saveName(self) -> None:
         # function stores user's name
         self.name = self.textEdit.toPlainText()
+        self.name = self.name.lower()
     
     def saveSurname(self) -> None:
         # function stores user's surname
         self.surname = self.textEdit_2.toPlainText()
+        self.surname = self.surname.lower()
 
     def savePlaylistID(self) -> None:
         # function stores playlist ID chosen by the user
         self.playlist_id = self.textEdit_3.toPlainText()
 
+    def save_encodings(self, encodings: list, names: list) -> None:
+        # function saves known face encodings and names to a file
+        with open("enrollment_files/face_encodings.pkl", "wb") as f:
+            pickle.dump({"encodings": encodings, "names": names}, f)
+
+    def load_encodings(self):
+        # function loads existing face encodings and names from a file
+        if os.path.exists("enrollment_files/face_encodings.pkl"):
+            with open("enrollment_files/face_encodings.pkl", "rb") as f:
+                data = pickle.load(f)
+                return data["encodings"], data["names"]
+        return [], []
+
     def take_photo(self) -> None:
-        # function takes user's photo for enrollment
+        # function takes user's photo for enrollment and computes and stores face embeddings of new user
         _, frame = self.takeFace.cap.read()
+
+        """ Store photo taken on device
         photo = self.takeFace.convert_image(frame)
-        filename = "enrollment_photo/"+self.name+"_"+self.surname+".png"
+        filename = "enrollment_files/"+self.name+"_"+self.surname+".png"
         photo.save(filename, "png")
+        """
+        pil_image = Image.fromarray(frame)
+        with io.BytesIO() as byte_io:   # convert PIL Image to bytes (avoids saving image)
+            pil_image.save(byte_io, format='JPEG')
+            byte_io.seek(0)
+            image_bytes = byte_io.read()
+
+        # compute face embeddings
+        user_image = face_recognition.load_image_file(io.BytesIO(image_bytes))
+        user_face_encoding = face_recognition.face_encodings(user_image)[0]
+
+        # load existing encodings + add new user and save
+        known_face_encodings, known_face_names = self.load_encodings()
+        known_face_encodings.append(user_face_encoding)
+        known_face_names.append(f"{self.name}_{self.surname}")
+        self.save_encodings(known_face_encodings, known_face_names)
+
         self.pushButton_2.setText("PHOTO TAKEN")
+        self.pushButton_2.setEnabled(False)
+
+    def load_preferences(self):
+        # function loads existing playlist id chosen by previous users
+        if os.path.exists("enrollment_files/preferences.pkl"):
+            with open("enrollment_files/preferences.pkl", "rb") as f:
+                data = pickle.load(f)
+                return data["names"], data["playlist_ids"]
+        return [], []
+
+    def save_preferences(self, names: list, playlist_id: list) -> None:
+        # function saves in a file the playlist id chosen by each user
+        with open("enrollment_files/preferences.pkl", "wb") as f:
+            pickle.dump({"names": names, "playlist_ids": playlist_id}, f)
 
     def enroll_method(self) -> None:
         # function moves forward to the face detection phase
         if self.name and self.surname and self.playlist_id:
-            
-            # TODO: funzione che manda al modello di face detection la foto scattata (enrollment) con nome e cognome (label) associato
-            
             self.faceDetection_window = FaceDetectionWindow()
-            self.faceDetection_window.name = self.name
-            self.faceDetection_window.surname = self.surname
-            self.faceDetection_window.playlist_id = self.playlist_id
+            known_names, known_playlistIDS = self.load_preferences()
+            
+            if f"{self.name}_{self.surname}" not in known_names:
+                known_names.append(f"{self.name}_{self.surname}")
+                known_playlistIDS.append(self.playlist_id)
+            else:
+                known_playlistIDS[known_names.index(f"{self.name}_{self.surname}")] = self.playlist_id
+            
+            self.save_preferences(known_names, known_playlistIDS)
+            
             self.faceDetection_window.token = self.token
             self.close()
             self.faceDetection_window.show()
             
-    
