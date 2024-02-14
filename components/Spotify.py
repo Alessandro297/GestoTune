@@ -52,6 +52,16 @@ class SpotifyAPI(QThread):
         except Exception as e:
             print(f"Exception: {e}")
 
+    def get_playlist_name(self, playlist_id: str) -> str:
+        # function gets name of the playlist chosen by the user
+        try:
+            endpoint = f"https://api.spotify.com/v1/playlists/{playlist_id}"
+            response = requests.get(endpoint, headers=self.headers)
+            info = response.json()
+            return info["name"]
+        except Exception as e:
+            print(f"Exception: {e}")
+
     def start_playback(self, playlist_id: str) -> None:
         # function starts playing paused track
         try:
