@@ -1,2 +1,2 @@
 # GestoTune
-<img width="470" alt="GESTOTUNE" src="https://github.com/Alessandro297/GestoTune/assets/152632307/d4d385fc-a14e-47fe-8394-300225ce5380">
+![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
