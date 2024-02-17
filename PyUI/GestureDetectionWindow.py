@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'GestureDetectionWindow.ui'
+# Form implementation generated from reading ui file '.\ui\GestureDetectionWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -119,11 +119,19 @@ class Ui_DetectionWindow(object):
         self.detection_camera.setObjectName("detection_camera")
         self.verticalLayout_3.addWidget(self.detection_camera)
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_10.setContentsMargins(-1, 20, -1, 20)
+        self.horizontalLayout_10.setContentsMargins(-1, 12, -1, 0)
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
+        self.label_4 = QtWidgets.QLabel(DetectionWindow)
+        self.label_4.setMinimumSize(QtCore.QSize(370, 85))
+        self.label_4.setMaximumSize(QtCore.QSize(370, 85))
+        self.label_4.setText("")
+        self.label_4.setPixmap(QtGui.QPixmap("logos_graphics/legenda.png"))
+        self.label_4.setScaledContents(True)
+        self.label_4.setObjectName("label_4")
+        self.horizontalLayout_10.addWidget(self.label_4)
         self.pushButton_2 = QtWidgets.QPushButton(DetectionWindow)
-        self.pushButton_2.setMinimumSize(QtCore.QSize(150, 56))
-        self.pushButton_2.setMaximumSize(QtCore.QSize(150, 56))
+        self.pushButton_2.setMinimumSize(QtCore.QSize(130, 56))
+        self.pushButton_2.setMaximumSize(QtCore.QSize(130, 56))
         self.pushButton_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton_2.setObjectName("pushButton_2")
         self.horizontalLayout_10.addWidget(self.pushButton_2)
