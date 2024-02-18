@@ -1,5 +1,4 @@
-# GestoTune
-<img src="logos_graphics/gestotune_logo.png" alt="Image" width="250" height="250">
+<img src="logos_graphics/gestotune_logo.png" alt="Image" width="100" height="100"> # GestoTune
 
 ## Description
 
