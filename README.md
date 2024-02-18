@@ -1,6 +1,5 @@
 # GestoTune
-![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
-<div align="center">
+![gestotune_logo](https://github.com/Alessandro297/GestoTune/assets/152632307/73a764c8-5173-45e8-ac4c-a4ec8012a03d)
 
 ## 📝 Description
 
@@ -43,8 +42,8 @@ using hand gestures. To do this, **Python 3.11.5** was used with **dlib**, **Ope
 7. Open your spotify app, start play music and use this app to control it
 
 ## ✋ Gestures
-
-
+![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
+<div align="center">
 ## 🎶 Spotify API
 
 > Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
