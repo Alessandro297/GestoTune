@@ -18,7 +18,7 @@ class GestureDetectionWindow(QDialog, Ui_DetectionWindow):
         self.playlist_id = ""
         self.gestureDetection = GestureDetectionThread()
         self._connect_buttons()
-        self.setWindowIcon(QIcon("GUI/hand.png"))
+        self.setWindowIcon(QIcon("logos_graphics/gestotune_logo.png"))
 
     def _connect_buttons(self) -> None:
         # function connects buttons with their actions

@@ -30,7 +30,7 @@ class EnrollmentWindow(QDialog, Ui_DetectionWindow):
         self._store_text()
         self._connect_buttons()
         self._connect_camera()
-        self.setWindowIcon(QIcon("GUI/face.png"))
+        self.setWindowIcon(QIcon("logos_graphics/gestotune_logo.png"))
     
     def _connect_buttons(self) -> None:
         # function connects buttons with their actions

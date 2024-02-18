@@ -21,7 +21,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.enrollment_window = None
         self.faceDetection_window = None
         self._connect_buttons()
-        self.setWindowIcon(QIcon("GUI/sound.png"))
+        self.setWindowIcon(QIcon("logos_graphics/gestotune_logo.png"))
     
     def _connect_buttons(self) -> None:
         # function connects buttons with their actions

@@ -22,7 +22,7 @@ class FaceDetectionWindow(QDialog, Ui_DetectionWindow):
         self.faceDetection = FaceDetectionThread()
         self.gestureDetection_window = None
         self._connect_buttons()
-        self.setWindowIcon(QIcon("GUI/face.png"))
+        self.setWindowIcon(QIcon("logos_graphics/gestotune_logo.png"))
 
     def _connect_buttons(self) -> None:
         # function connects buttons with their actions
