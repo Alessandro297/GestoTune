@@ -22,6 +22,7 @@ class SpotifyAPI(QThread):
         self.client_secret = os.getenv("CLIENT_SECRET")
         self.redirect_uri = "http://localhost:8888/spotify-api/callback/"
         self.token = token
+        self.counter = 0
         self.headers = {"Authorization": f"Bearer {self.token}"}
 
     change_token = pyqtSignal(str)
@@ -66,7 +67,12 @@ class SpotifyAPI(QThread):
         # function starts playing paused track
         try:
             endpoint = "https://api.spotify.com/v1/me/player/play"
-            requests.put(endpoint, headers=self.headers, data={"context_uri": f"spotify:playlist:{playlist_id}", "offset":{"position":1}})
+
+            if self.counter==0:
+                context_uri = "{"+'"context_uri":"'+f"spotify:playlist:{playlist_id}"+'"}'
+                requests.put(endpoint, headers=self.headers, data=context_uri)
+            else:
+                requests.put(endpoint, headers=self.headers)
         except Exception as e:
             print(f"Exception: {e}")
 
@@ -78,15 +84,12 @@ class SpotifyAPI(QThread):
         except Exception as e:
             print(f"Exception: {e}")
 
-    def change_playing_status(self, playlist_id: str) -> None:
-        # function starts play or pauses music based on current status
+    def get_playing_status(self) -> None:
+        # function checks music player's current status
         try:
             is_playing = self.get_playback_state()["is_playing"]
-            
             if is_playing:
-                self.pause_playback()
-            else:
-                self.start_playback(playlist_id)
+                self.counter += 1
         except Exception as e:
             print(f"Exception: {e}")
     
@@ -107,9 +110,8 @@ class SpotifyAPI(QThread):
             print(f"Exception: {e}")
 
     def increase_volume(self) -> None:
-        # function increases current volume by a step
-        
-        step = 5
+        # function increases current volume by a step 
+        step = 15
         try:
             current_volume = self.get_playback_state()["device"]["volume_percent"]
             volume = current_volume + step if current_volume + step < 100 else 100
@@ -121,8 +123,7 @@ class SpotifyAPI(QThread):
 
     def decrease_volume(self) -> None:
         # function decreases current volume by a step
-        
-        step = 5
+        step = 15
         try:
             current_volume = self.get_playback_state()["device"]["volume_percent"]
             volume = current_volume - step if current_volume - step > 0 else 0
@@ -137,9 +138,9 @@ class SpotifyAPI(QThread):
         # returns detected gesture string name
         
         if gesture == "play":
-            self.change_playing_status(playlist_id)
+            self.start_playback(playlist_id)
         elif gesture == "pause":
-            self.change_playing_status(playlist_id)
+            self.pause_playback()
         elif gesture == "next":
             self.skip_to_next()
         elif gesture == "previous":
@@ -148,6 +149,7 @@ class SpotifyAPI(QThread):
             self.increase_volume()
         elif gesture == "decrease":
             self.decrease_volume()
+        self.get_playing_status()
 
     def run(self):
         self.get_token()
