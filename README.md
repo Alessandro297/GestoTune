@@ -1,17 +1,12 @@
 # GestoTune
 <img src="logos_graphics/gestotune_logo.png" alt="Image" width="250" height="250">
-## 📝 Description
+
+## Description
 
 GestoTune is an application that allows to control spotify playlists using hand gestures. The application is able to recognize enrolled users and associate to them their prefered playlist.
+To do this, **Python 3.11.5** was used with **dlib**, **OpenCV** and **MediaPipe** libraries. **Pytorch** model was trained on custom dataset, which was created by modifying the subsample of the **HaGRID** dataset.
 
-- play/pause current track
-- skip to next/previous track
-- add/remove song to saved
-- volume up/down music
-
-using hand gestures. To do this, **Python 3.11.5** was used with **dlib**, **OpenCV** and **MediaPipe** libraries. **Pytorch** model was trained on custom dataset, which was created by modifying the subsample of the **HaGRID** dataset.
-
-## 🏃‍ How to install and run it?
+## How to install and run
 
 **Remember: to use this app you need to have premium version of Spotify.**
 
@@ -29,16 +24,18 @@ using hand gestures. To do this, **Python 3.11.5** was used with **dlib**, **Ope
    ```bash
    $ pip install -r .\requirements.txt
    ```
-5. In root project directory, create .env file with following content (from your Spotify Dashboard):
+5. In root project directory, create .env file with following content (from your Spotify project Dashboard):
    ```
-   CLIENT_ID=<YOUR CLIENT ID>
-   CLIENT_SECRET=<YOUR CLIENT SECRET>
+   CLIENT_ID= ...
+   CLIENT_SECRET= ...
    ```
 6. Start app
    ```
    python main.py
    ```
-7. Open your spotify app, start play music and use this app to control it
+7. Click on `login` to connect to spotify API
+8. If using the app for the first time, procede with `enroll`, otherwise with `start`.
+9. Open your spotify app, start play music and use this app to control it.
 
 ## ✋ Gestures
 ![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
