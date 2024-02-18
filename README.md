@@ -37,14 +37,14 @@ To do this, **Python 3.11.5** was used with **dlib**, **OpenCV** and **MediaPipe
 8. If using the app for the first time, procede with `enroll`, otherwise with `start`.
 9. Open your spotify app, start play music and use this app to control it.
 
-## ✋ Gestures
+## Gestures
 ![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
 <div align="center">
-## 🎶 Spotify API
+   
+## Spotify API
 
 > Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
 
 If no action on Spotify is made, please open your app and start play music manually. Then, you can use this app to control it.
 
-## 🖊 Credits
 
