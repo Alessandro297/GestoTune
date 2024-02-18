@@ -1,9 +1,6 @@
 # GestoTune
 ![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
 <div align="center">
-<h1>SPOTIFY GESTURE CONTROLLER</h1>
-<img src="https://user-images.githubusercontent.com/62251989/149663561-90e99712-58a9-40c6-9822-69a7092d582b.png" alt="Spotify Gesture Controller logo"/>
-</div>
 
 ## 📝 Description
 
@@ -56,5 +53,3 @@ If no action on Spotify is made, please open your app and start play music manua
 
 ## 🖊 Credits
 
-- Heart photo created by nakaridore - [Freepik](www.freepik.com)
-- Icons - [Flaticon](Flaticon.com)
