@@ -1,6 +1,5 @@
 # GestoTune
-![gestotune_logo](https://github.com/Alessandro297/GestoTune/assets/152632307/73a764c8-5173-45e8-ac4c-a4ec8012a03d)
-
+<img src="logos_graphics/gestotune_logo.png" alt="Image" width="250" height="250">
 ## 📝 Description
 
 GestoTune is an application that allows to control spotify playlists using hand gestures. The application is able to recognize enrolled users and associate to them their prefered playlist.
