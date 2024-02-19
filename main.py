@@ -5,11 +5,11 @@ from PyQt5.QtCore import Qt
 from GUI.MainWindow import MainWindow
 
 def main():
-    # Handle high resolution displays:
+    # Handle resolution displays:
     if hasattr(Qt, 'AA_EnableHighDpiScaling'):
-        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, True)
+        QApplication.setAttribute(Qt.AA_EnableHighDpiScaling, False)
     if hasattr(Qt, 'AA_UseHighDpiPixmaps'):
-        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, True)
+        QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps, False)
 
     application = QApplication([])
     window = MainWindow()
