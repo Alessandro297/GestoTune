@@ -15,8 +15,7 @@ Note that the gesture-control part is meant to be used with the right hand, and 
 
 1. Download repository
    ```
-   git clone https://github.com/kzaleskaa/hand-gesture-recognition.git
-   cd hand-gesture-recognition
+   git clone https://github.com/Alessandro297/GestoTune.git
    ```
 2. Create a new project at [Spotify Dashboard](https://developer.spotify.com/dashboard/) and edit settings - add `http://localhost:8888/spotify-api/callback/` in Redirect URLs.
 3. Create your environment and activate it
