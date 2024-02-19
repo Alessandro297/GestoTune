@@ -14,9 +14,11 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_DetectionWindow(object):
     def setupUi(self, DetectionWindow):
         DetectionWindow.setObjectName("DetectionWindow")
-        DetectionWindow.resize(996, 592)
+        DetectionWindow.resize(QtCore.QSize(996, 592))
+        DetectionWindow.setFixedSize(QtCore.QSize(996, 592))
         DetectionWindow.setMinimumSize(QtCore.QSize(996, 592))
-        DetectionWindow.setMaximumSize(QtCore.QSize(996, 592))
+        DetectionWindow.setMaximumSize(QtCore.QSize(996, 700))
+        DetectionWindow.setBaseSize(QtCore.QSize(996, 592))
         DetectionWindow.setStyleSheet("QDialog {\n"
 "background-color:  #2a292e;\n"
 "}\n"
@@ -57,7 +59,6 @@ class Ui_DetectionWindow(object):
         spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_4.addItem(spacerItem)
         self.label_3 = QtWidgets.QLabel(DetectionWindow)
-        self.label_3.setMinimumSize(QtCore.QSize(0, 50))
         self.label_3.setStyleSheet("color: white;\n"
 "border: 2px solid #535353;\n"
 "border-radius: 14px;\n"

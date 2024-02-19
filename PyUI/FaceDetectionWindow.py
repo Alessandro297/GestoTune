@@ -14,9 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_DetectionWindow(object):
     def setupUi(self, DetectionWindow):
         DetectionWindow.setObjectName("DetectionWindow")
-        DetectionWindow.resize(996, 592)
+        DetectionWindow.resize(QtCore.QSize(996, 592))
+        DetectionWindow.setFixedSize(QtCore.QSize(996, 592))
         DetectionWindow.setMinimumSize(QtCore.QSize(996, 592))
-        DetectionWindow.setMaximumSize(QtCore.QSize(996, 592))
+        DetectionWindow.setMaximumSize(QtCore.QSize(996, 700))
         DetectionWindow.setStyleSheet("QDialog {\n"
 "background-color:  #2a292e;\n"
 "}\n"

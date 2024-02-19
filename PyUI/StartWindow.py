@@ -15,7 +15,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.setEnabled(True)
-        MainWindow.resize(650, 700)
+        MainWindow.resize(QtCore.QSize(650, 700))
+        MainWindow.setFixedSize(QtCore.QSize(700, 800))
         MainWindow.setMinimumSize(QtCore.QSize(650, 750))
         MainWindow.setMaximumSize(QtCore.QSize(650, 750))
         MainWindow.setBaseSize(QtCore.QSize(650, 750))
