@@ -86,9 +86,9 @@ class Ui_DetectionWindow(object):
         self.textEdit = QtWidgets.QTextEdit(self.verticalWidget)
         self.textEdit.setMinimumSize(QtCore.QSize(270, 30))
         self.textEdit.setMaximumSize(QtCore.QSize(270, 35))
-        font = QtGui.QFont()
+        font = QtGui.QFont("MS Shell Dlg 2")
         font.setPointSize(14)
-        font.setBold(True)
+        font.setBold(False)
         font.setWeight(75)
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
@@ -105,9 +105,9 @@ class Ui_DetectionWindow(object):
         self.textEdit_2 = QtWidgets.QTextEdit(self.verticalWidget)
         self.textEdit_2.setMinimumSize(QtCore.QSize(270, 35))
         self.textEdit_2.setMaximumSize(QtCore.QSize(270, 35))
-        font = QtGui.QFont()
+        font = QtGui.QFont("MS Shell Dlg 2")
         font.setPointSize(14)
-        font.setBold(True)
+        font.setBold(False)
         font.setWeight(75)
         self.textEdit_2.setFont(font)
         self.textEdit_2.setObjectName("textEdit_2")
@@ -124,9 +124,9 @@ class Ui_DetectionWindow(object):
         self.textEdit_3 = QtWidgets.QTextEdit(self.verticalWidget)
         self.textEdit_3.setMinimumSize(QtCore.QSize(270, 35))
         self.textEdit_3.setMaximumSize(QtCore.QSize(270, 35))
-        font = QtGui.QFont()
+        font = QtGui.QFont("MS Shell Dlg 2")
         font.setPointSize(12)
-        font.setBold(True)
+        font.setBold(False)
         font.setWeight(75)
         self.textEdit_3.setFont(font)
         self.textEdit_3.setObjectName("textEdit_3")
@@ -186,19 +186,19 @@ class Ui_DetectionWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt; font-weight:400;\"><br /></p></body></html>"))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:bold;\"><br /></p></body></html>"))
         self.label_2.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">SURNAME</span></p></body></html>"))
         self.textEdit_2.setHtml(_translate("DetectionWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt; font-weight:400;\"><br /></p></body></html>"))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:14pt; font-weight:bold;\"><br /></p></body></html>"))
         self.label_4.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">PLAYLIST ID</span></p></body></html>"))
         self.textEdit_3.setHtml(_translate("DetectionWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:14pt; font-weight:600; font-style:normal;\">\n"
-"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8.25pt; font-weight:400;\"><br /></p></body></html>"))
+"<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:12pt; font-weight:bold;\"><br /></p></body></html>"))
         self.detection_camera.setText(_translate("DetectionWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:16pt;\">TAKE PHOTO TO REGISTER YOUR FACE</span></p></body></html>"))
         self.pushButton_2.setText(_translate("DetectionWindow", "TAKE PHOTO"))
         self.pushButton_3.setText(_translate("DetectionWindow", "NEXT"))
