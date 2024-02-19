@@ -93,8 +93,8 @@ class GestureDetectionThread(QThread):
             # compute the mode of labels, i.e. the most present gesture, and the confidence
             mode, _ = torch.mode(predicted.view(-1))
             gesture = self.num_to_gesture[mode.item()]
-            mode_confidence, _ = torch.mode(confidence.view(-1))
-            return gesture, mode_confidence.item()
+            mean_confidence = torch.mean(confidence[predicted==mode.item()].view(-1))
+            return gesture, mean_confidence.item()
 
     def run(self) -> None:
         # function detects gestures based on image from camera and add detected gesture's name to the queue
@@ -138,9 +138,11 @@ class GestureDetectionThread(QThread):
                             landmarks = torch.tensor(landmarks).view(30,21,3)
                             gesture, confidence = self.predict(self.model, landmarks)
 
-                            self.change_gesture_name.emit(gesture)
-                            spotify.gesture_action(gesture, self.playlist_id)
-                            self.change_confidence.emit(f"{round(confidence*100, 2)}%")
+                            if confidence > THRESHOLD:
+                                self.change_gesture_name.emit(gesture)
+                                spotify.gesture_action(gesture, self.playlist_id)
+                                self.change_confidence.emit(f"{round(confidence*100, 2)}%")
+                            
                             # empty landmarks list
                             landmarks = []
                             last_predictionTime = time.time()
