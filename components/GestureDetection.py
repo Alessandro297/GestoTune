@@ -25,7 +25,7 @@ class GestureClassifier(nn.Module):
         self.fc2 = nn.Linear(42, 21)
         self.fc3 = nn.Linear(21, 6)
         self.relu = nn.ReLU()
-        # added softmax here to scale output in [0,1] and compute confidence, not present in train/val/testing on colab
+        # added softmax here to scale output in [0,1] and compute confidence, not present in the model for train/val/testing on colab
         self.softmax = nn.Softmax()
 
     def forward(self, x):
