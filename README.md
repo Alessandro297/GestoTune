@@ -9,6 +9,8 @@ GestoTune is an application that allows to control spotify playlists using hand 
 To do this, **Python 3.11.5** was used with **dlib**, **OpenCV**, **MediaPipe** and **PyQt5** libraries. **Pytorch** model was trained on custom dataset, which was created by modifying the subsample of the **HaGRID** dataset.
 Note that the gesture-control part is meant to be used with the right hand, and does not detect the left one.
 
+Demo videos are available via [this link](https://drive.google.com/drive/folders/1c8y3N0-ZQ73lF7QIIiLYRUeI46pH8Uw5?usp=sharing).
+
 ## How to install and run
 
 **Remember: to use this app you need to have premium version of Spotify.**
