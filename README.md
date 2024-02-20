@@ -9,7 +9,7 @@ GestoTune is an application that allows to control spotify playlists using hand 
 To do this, **Python 3.11.5** was used with **dlib**, **OpenCV**, **MediaPipe** and **PyQt5** libraries. **Pytorch** model was trained on custom dataset, which was created by modifying the subsample of the **HaGRID** dataset.
 Note that the gesture-control part is meant to be used with the right hand, and does not detect the left one.
 
-Demo videos are available via [this link](https://drive.google.com/drive/folders/1c8y3N0-ZQ73lF7QIIiLYRUeI46pH8Uw5?usp=sharing).
+Demo videos are available via [this link](https://drive.google.com/drive/folders/1c8y3N0-ZQ73lF7QIIiLYRUeI46pH8Uw5?usp=sharing) in our Google Drive folder.
 
 ## How to install and run
 
@@ -50,7 +50,7 @@ Demo videos are available via [this link](https://drive.google.com/drive/folders
 In the folder `model' there's the best model, deployed in the application.
 In the same folder is possible to find a notebook in which is shown how the dataset was created and other possible models which have been tested.
 Via [this link](https://drive.google.com/drive/folders/1c8y3N0-ZQ73lF7QIIiLYRUeI46pH8Uw5?usp=sharing
-) one can access to the already processed images, as well as the extracted landmarks and labels of the final dataset.
+) one can access to our Google Drive folder which contains the already processed images, as well as the extracted landmarks and labels of the final dataset.
 
 ## Spotify API
 
