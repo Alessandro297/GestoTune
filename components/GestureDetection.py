@@ -142,6 +142,9 @@ class GestureDetectionThread(QThread):
                                 self.change_gesture_name.emit(gesture)
                                 spotify.gesture_action(gesture, self.playlist_id)
                                 self.change_confidence.emit(f"{round(confidence*100, 2)}%")
+                            else:
+                                self.change_gesture_name.emit("Null")
+                                self.change_confidence.emit("-")
                             
                             # empty landmarks list
                             landmarks = []
