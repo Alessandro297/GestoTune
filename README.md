@@ -43,7 +43,13 @@ Note that the gesture-control part is meant to be used with the right hand, and 
 ## Gestures
 ![legenda](https://github.com/Alessandro297/GestoTune/assets/152632307/08137d0e-a168-4665-b1d7-58fa7a1f350b)
 <div align="center">
-   
+
+## Extra files
+In the folder `model' there's the best model, deployed in the application.
+In the same folder is possible to find a notebook in which is shown how the dataset was created and other possible models which have been tested.
+Via [this link](https://drive.google.com/drive/folders/1c8y3N0-ZQ73lF7QIIiLYRUeI46pH8Uw5?usp=sharing
+) one can access to the already processed images, as well as the extracted landmarks and labels of the final dataset.
+
 ## Spotify API
 
 > Based on simple REST principles, the Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
