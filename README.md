@@ -20,7 +20,7 @@ Demo videos are available via [this link](https://drive.google.com/drive/folders
    git clone https://github.com/Alessandro297/GestoTune.git
    cd GestoTune
    ```
-2. Create a new project at [Spotify Dashboard](https://developer.spotify.com/dashboard/) and edit settings - add `http://localhost:8888/spotify-api/callback/` in Redirect URLs.
+2. Create a new project at [Spotify Dashboard](https://developer.spotify.com/dashboard/) and edit settings - add `http://localhost:8888/spotify-api/callback/` in Redirect URLs and select "Web API" for the question asking which APIs are you planning to use.
 3. Create your environment and activate it
    ```bash
    $ python -m venv venv
