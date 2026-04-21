@@ -29,7 +29,7 @@ PyQt5==5.15.10
 pycparser==2.21
 pyparsing==3.1.1
 python-dateutil==2.8.2
-python-dotenv==1.0.0
+python-dotenv==1.2.2
 Requests==2.33.0
 scikit-learn==1.5.0
 scipy==1.12.0
